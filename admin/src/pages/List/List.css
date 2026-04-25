@@ -1,78 +1,88 @@
-.list-add-col {
-    padding: 20px 5%; 
+/* --- Desktop View (Standard) --- */
+.list-add {
+    padding: 30px 50px;
+    width: 100%;
+}
+
+.list-table {
+    margin-top: 20px;
 }
 
 .list-table-format {
     display: grid;
-    
     grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     padding: 12px 15px;
-    border: 1px solid #e9e9e9;
-    font-size: 14px;
-    background-color: white;
+    border: 1px solid #cacaca;
+    font-size: 15px;
 }
 
 .list-table-format.title {
     background-color: #f9f9f9;
     font-weight: 600;
-    color: #494949;
-    border-bottom: 2px solid #00a884; 
 }
 
 .list-table-format img {
     width: 50px;
-    height: 50px;
-    object-fit: cover;
     border-radius: 4px;
 }
 
 .cursor {
     cursor: pointer;
-    color: #d9534f; 
-    font-weight: bold;
     text-align: center;
-    transition: 0.2s;
+    font-weight: bold;
 }
 
-.cursor:hover {
-    color: red;
-    transform: scale(1.2);
-}
-
-
-
+/* --- Responsive Tablet View (750px) --- */
 @media (max-width: 750px) {
-    .list-add-col {
-        padding: 15px 10px;
-        margin-left: 20px; 
+    .list-add {
+        padding: 20px 30px;
     }
 
     .list-table-format {
-        
+        /* Category (3rd column) ko hide kar rahe hain */
         grid-template-columns: 0.6fr 2fr 0.8fr 0.4fr; 
-        font-size: 12px;
-        padding: 10px 5px;
-        gap: 10px;
+        font-size: 13px;
+        padding: 10px 8px;
     }
 
-    
-    .list-table-format p:nth-child(3), 
-    .list-table-format b:nth-child(3) {
+    /* Category ko hide karne ka logic */
+    .list-table-format b:nth-child(3),
+    .list-table-format p:nth-child(3) {
         display: none;
     }
 }
 
+/* --- Responsive Mobile View (480px) --- */
 @media (max-width: 480px) {
-    .list-table-format {
-        
-        grid-template-columns: 1fr 2.5fr 1fr 0.5fr;
-        gap: 8px;
+    .list-add {
+        padding: 15px 10px;
     }
-    
+
+    .list-add p {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .list-table-format {
+        /* Columns ko mobile ke liye aur tight kiya */
+        grid-template-columns: 1fr 2.5fr 1fr 0.5fr;
+        gap: 5px;
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+
     .list-table-format img {
         width: 40px;
         height: 40px;
+        object-fit: cover;
+    }
+
+    /* Cross (X) icon ko red aur bold taaki tap karna aasan ho */
+    .cursor {
+        color: #ff4c24;
+        font-size: 16px;
     }
 }
