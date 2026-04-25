@@ -1,0 +1,111 @@
+.add {
+
+    width: calc(100% - 150px); 
+    margin-left: max(5vw, 25px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 16px;
+    padding-bottom: 50px; 
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Image Upload Area */
+.add-img-upload img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.upload-area {
+    width: 120px;
+    height: 80px;
+    border: 1px dashed #a9a9a9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+
+.add-product-name, .add-product-description {
+    width: 100%;
+    max-width: 400px; 
+}
+
+.add-product-name input, .add-product-description textarea {
+    padding: 10px;
+    border: 1px solid #a9a9a9;
+    border-radius: 4px;
+    outline-color: #00a884; 
+}
+
+.add-category-price {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.add-category select, .add-price input {
+    width: 150px; 
+    padding: 10px;
+    border: 1px solid #a9a9a9;
+    border-radius: 4px;
+    outline-color: #00a884;
+}
+
+.add-btn {
+    width: 120px;
+    border: none;
+    padding: 10px;
+    background-color: #00a884; 
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: 0.2s ease-in-out;
+    margin-top: 10px;
+}
+
+.add-btn:hover {
+    background-color: #008f6f; 
+}
+
+
+@media (max-width: 900px) {
+    .add {
+        width: 80%; 
+    }
+}
+
+@media (max-width: 600px) {
+    .add {
+        width: 90%;
+        margin-left: 20px; 
+        margin-top: 30px;
+    }
+
+    .add-product-name, .add-product-description {
+        max-width: 100%; 
+    }
+
+    .add-category-price {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .add-category select, .add-price input {
+        width: 100%; 
+    }
+
+    .add-btn {
+        width: 100%; 
+    }
+}

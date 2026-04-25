@@ -1,0 +1,120 @@
+.place-order {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 100px auto;
+    max-width: 1200px;
+    padding: 0 5%;
+}
+
+.place-order-left {
+    width: 100%;
+    max-width: max(30%, 500px);
+}
+
+.place-order-left .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.place-order-left input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: #00a884;
+}
+
+.multi-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.place-order-right {
+    width: 100%;
+    max-width: max(40%, 500px);
+}
+
+
+.payment-method-selection {
+    margin-top: 35px;
+}
+
+.payment-method-selection h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #444;
+}
+
+.method-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.method-option:hover {
+    background-color: #fcfcfc;
+    border-color: #00a884;
+}
+
+/* Jab box select ho jaye */
+.method-option.active {
+    border-color: #00a884;
+    background-color: #f8fff8;
+}
+
+.radio-circle {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+}
+
+.method-option.active .radio-circle {
+    border-color: #00a884;
+}
+
+.method-option.active .radio-circle::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #00a884;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.place-order button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 4px;
+    background-color: #00a884;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .place-order {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .place-order-left, .place-order-right {
+        max-width: 100%;
+    }
+}

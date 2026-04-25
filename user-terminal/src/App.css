@@ -1,0 +1,22 @@
+/* App.css */
+.app {
+  width: 100%;
+  margin: 0 auto; /* Isse content center hoga */
+  display: flex;
+  flex-direction: column;
+  
+}
+
+@media (max-width: 1050px) {
+  .app {
+    width: 90%;
+  }
+}
+
+/* Yahan dhyan dena (Photo wala error yahi theek hoga) */
+@media (max-width: 750px) {
+  .app {
+    width: 95%; 
+    
+  }
+}

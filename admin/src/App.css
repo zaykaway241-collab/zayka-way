@@ -1,0 +1,54 @@
+
+.app-content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.pages-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fcfcfc;
+    
+    overflow-x: auto; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media (max-width: 750px) {
+    .pages-content {
+        padding: 15px 10px;
+        width: 100%;
+    
+        display: block; 
+    }
+
+    
+    .add, .list, .orders {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    
+    .list-table {
+        min-width: 500px; 
+    }
+}
+
+/* Footer Styling */
+.admin-footer {
+    margin-top: auto;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #e9e9e9;
+    color: #888;
+    font-size: 12px;
+}

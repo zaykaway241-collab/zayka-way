@@ -1,0 +1,84 @@
+.menu-wrapper { padding: 30px 6%; }
+
+.gallery-header { margin-bottom: 40px; }
+.gallery-header h2 { font-size: 2.2rem; color: #1a1a1a; margin-bottom: 5px; }
+.underline { width: 50px; height: 4px; background: #00a884; border-radius: 2px; }
+
+.product-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.item-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.item-card:hover { transform: translateY(-8px); }
+
+.img-box { position: relative; height: 190px; }
+.img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+.rating-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: white;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+.rating-badge img { height: 12px; }
+
+.item-body { padding: 20px; }
+.item-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.item-title h3 { font-size: 1.1rem; margin: 0; color: #333; }
+.cat-label { font-size: 0.7rem; background: #e8f5f2; color: #00a884; padding: 3px 10px; border-radius: 30px; font-weight: 700; }
+
+.item-desc { font-size: 0.85rem; color: #777; line-height: 1.4; margin-bottom: 20px; height: 40px; overflow: hidden; }
+
+.price-action { display: flex; justify-content: space-between; align-items: center; min-height: 40px; }
+.item-price { font-size: 1.3rem; font-weight: 800; color: #1a1a1a; }
+
+.add-to-plate {
+    background: #00a884;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.plus-icon { height: 14px; }
+
+.item-counter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f0fdfa;
+    padding: 5px 8px;
+    border-radius: 25px;
+    border: 1px solid #00a884;
+}
+.item-counter img { width: 28px; cursor: pointer; }
+.item-counter p { font-weight: 800; color: #1a1a1a; margin: 0; min-width: 15px; text-align: center; }
+
+
+
+@media (max-width: 480px) {
+    .menu-wrapper {
+        padding: 20px 4%;
+    }
+    .product-layout {
+        grid-template-columns: 1fr; 
+    }
+    .gallery-header h2 {
+        font-size: 1.5rem;
+    }
+}
