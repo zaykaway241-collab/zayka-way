@@ -1,111 +1,118 @@
+/* --- Desktop View --- */
 .add {
-
-    width: calc(100% - 150px); 
+    width: 70%;
     margin-left: max(5vw, 25px);
     margin-top: 50px;
     color: #6d6d6d;
     font-size: 16px;
-    padding-bottom: 50px; 
 }
 
-.flex-col {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.add form {
+    gap: 20px;
 }
 
 /* Image Upload Area */
 .add-img-upload img {
     width: 120px;
-    height: 80px;
-    object-fit: cover;
+    cursor: pointer;
     border-radius: 4px;
-    cursor: pointer;
 }
 
-.upload-area {
-    width: 120px;
-    height: 80px;
-    border: 1px dashed #a9a9a9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background-color: #f9f9f9;
-}
-
-
-.add-product-name, .add-product-description {
-    width: 100%;
-    max-width: 400px; 
-}
-
-.add-product-name input, .add-product-description textarea {
+/* Inputs & Textarea */
+.add-product-name input, 
+.add-product-description textarea,
+.add-price input,
+.add-category select {
     padding: 10px;
     border: 1px solid #a9a9a9;
+    outline-color: #00a884; /* Tumhara brand color */
     border-radius: 4px;
-    outline-color: #00a884; 
 }
 
+.add-product-name input {
+    max-width: 400px;
+}
+
+.add-product-description textarea {
+    max-width: 400px;
+}
+
+/* Category and Price Row */
 .add-category-price {
     display: flex;
     gap: 30px;
-    flex-wrap: wrap;
 }
 
-.add-category select, .add-price input {
-    width: 150px; 
-    padding: 10px;
-    border: 1px solid #a9a9a9;
-    border-radius: 4px;
-    outline-color: #00a884;
+.add-category select,
+.add-price input {
+    max-width: 120px;
 }
 
+/* Add Button */
 .add-btn {
-    width: 120px;
+    max-width: 120px;
     border: none;
     padding: 10px;
-    background-color: #00a884; 
+    background-color: #00a884;
     color: white;
     cursor: pointer;
     font-weight: 500;
     border-radius: 4px;
-    transition: 0.2s ease-in-out;
-    margin-top: 10px;
+    transition: 0.3s;
 }
 
 .add-btn:hover {
-    background-color: #008f6f; 
+    background-color: #008f6f;
 }
 
-
-@media (max-width: 900px) {
+/* --- Responsive Tablet View (750px) --- */
+@media (max-width: 750px) {
     .add {
-        width: 80%; 
+        width: 80%;
+        margin-left: 30px;
     }
 }
 
-@media (max-width: 600px) {
+/* --- Responsive Mobile View (480px) --- */
+@media (max-width: 480px) {
     .add {
         width: 90%;
-        margin-left: 20px; 
-        margin-top: 30px;
+        margin-left: 15px;
+        margin-top: 20px;
+        font-size: 14px;
     }
 
-    .add-product-name, .add-product-description {
-        max-width: 100%; 
+    .add form {
+        width: 100%;
     }
 
+    /* Mobile par inputs puri width lenge */
+    .add-product-name input, 
+    .add-product-description textarea {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Category aur Price ko ek ke niche ek kar diya */
     .add-category-price {
-        flex-direction: column; 
-        gap: 15px;
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .add-category select, .add-price input {
-        width: 100%; 
+    .add-category select,
+    .add-price input {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .add-img-upload img {
+        width: 100px; /* Mobile par thoda chhota icon */
     }
 
     .add-btn {
-        width: 100%; 
+        max-width: 100%;
+        width: 100%; /* Mobile par bada button dabane mein easy hota hai */
+        padding: 12px;
+        font-size: 16px;
     }
 }
