@@ -6,7 +6,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({});
-    const url = "https://zayka-way.onrender.com"
+    const url = "https://zayka-way.onrender.com";
     const [food_list, setFoodList] = useState([]);
     const [token, setToken] = useState("");
 
