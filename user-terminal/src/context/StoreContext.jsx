@@ -50,7 +50,7 @@ const StoreContextProvider = (props) => {
             if (storedToken) {
                 setToken(storedToken);
                 
-                await loadCartData(storedToken); 
+                await loadCartData(storedToken);
             }
         }
         loadData();
