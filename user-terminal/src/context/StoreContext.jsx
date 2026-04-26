@@ -46,15 +46,32 @@ const StoreContextProvider = (props) => {
         setCartItems(response.data.cartData);
 
     useEffect(() => {
-        async function loadData() {
-            await fetchFoodList();
-            // Refresh karne par bhi user logged in rahe uske liye logic
-            if (localStorage.getItem("token")) {
-                setToken(localStorage.getItem("token"));
+    async function loadData() {
+        await fetchFoodList();
+        const storedToken = localStorage.getItem("token");
+
+        if (storedToken) {
+            try {
+                
+                const response = await axios.post(url + "/api/cart/get", {}, { headers: { token: storedToken } });
+                
+                if (response.data.success) {
+                    setToken(storedToken);
+                    setCartItems(response.data.cartData);
+                } else {
+
+                    localStorage.removeItem("token");
+                    setToken("");
+                }
+            } catch (error) {
+                
+                localStorage.removeItem("token");
+                setToken("");
             }
         }
-        loadData();
-    }, [])
+    }
+    loadData();
+}, [])
 
     const contextValue = {
         food_list,
